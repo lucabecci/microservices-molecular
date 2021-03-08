@@ -1,0 +1,17 @@
+{
+  "name": "molecular-microservice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "nodemon src/index",
+    "start:prod": "node src/index",
+    "pretty": "npx prettier --write src/*",
+    "check": "npx prettier --write src/* && npx eslint --fix src/*"
+  },
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  }
+}
