@@ -15,6 +15,7 @@
     "prettier": "^2.2.1"
   },
   "dependencies": {
-    "moleculer": "^0.14.12"
+    "moleculer": "^0.14.12",
+    "moleculer-web": "^0.9.1"
   }
 }

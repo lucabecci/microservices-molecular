@@ -23,3 +23,5 @@ const broker = new ServiceBroker({
         throw err;
     },
 });
+
+broker.call;
