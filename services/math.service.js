@@ -1,12 +1,30 @@
-module.exports = {
-    name: "Math",
-    version: 1,
-    actions: {
-        add(ctx) {
-            return Number(ctx.params.a) + Number(ctx.params.b);
-        },
-        sub(ctx) {
-            return Number(ctx.params.a) - Number(ctx.params.b);
-        },
-    },
-};
+const { Service } = require("moleculer");
+
+class MathService extends Service {
+    constructor(broker) {
+        super(broker);
+
+        this.parseServiceSchema({
+            name: "math",
+            settings: {
+                rest: "math/",
+            },
+            actions: {
+                add: {
+                    rest: "POST /added",
+                    params: {
+                        a: "number",
+                        b: "number",
+                    },
+                    handler: this.add,
+                },
+            },
+        });
+    }
+
+    add(ctx) {
+        return Number(ctx.params.a) + Number(ctx.params.b);
+    }
+}
+
+module.exports = MathService;

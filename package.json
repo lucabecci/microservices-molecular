@@ -4,10 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start:dev": "nodemon src/index",
-    "start:prod": "node src/index",
-    "pretty": "npx prettier --write src/*",
-    "check": "npx prettier --write src/* && npx eslint --fix src/*"
+    "start:dev": "nodemon api/index",
+    "start:prod": "node api/index",
+    "pretty": "npx prettier --write api/*",
+    "check": "npx prettier --write api/* && npx eslint --fix api/*"
   },
   "devDependencies": {
     "eslint": "^7.21.0",
