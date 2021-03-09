@@ -13,5 +13,8 @@
     "eslint": "^7.21.0",
     "nodemon": "^2.0.7",
     "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "moleculer": "^0.14.12"
   }
 }
